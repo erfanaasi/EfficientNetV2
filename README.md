@@ -7,3 +7,8 @@ The original [implementation](https://github.com/google/automl/tree/master/effic
 2) https://github.com/jahongir7174/EfficientNetV2
 
 3) https://github.com/d-li14/efficientnetv2.pytorch
+
+There is also an implementation used in [TorchVision](http://pytorch.org/vision/main/generated/torchvision.models.efficientnet_v2_s.html) that we are considering.
+
+
+## Literature Review
