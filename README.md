@@ -1,1 +1,9 @@
 # EfficientNetV2
+In this project we are considering re-implementation and evaluation of the method ["EfficientNetV2: Smaller Models and Faster Training".](https://arxiv.org/abs/2104.00298). We desire the use the pretrained model and finetune it on CIFAR10 dataset.
+
+The original [implementation](https://github.com/google/automl/tree/master/efficientnetv2) uses TensorFlow. Since we desire PyTorch-based implementations, we are considering these implementations in the literature:
+1) https://github.com/hankyul2/EfficientNetV2-pytorch
+
+2) https://github.com/jahongir7174/EfficientNetV2
+
+3) https://github.com/d-li14/efficientnetv2.pytorch
