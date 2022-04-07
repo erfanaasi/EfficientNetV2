@@ -12,5 +12,5 @@ There is also an implementation used in [TorchVision](http://pytorch.org/vision/
 
 
 ## Literature Review
-Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNest](https://arxiv.org/abs/2004.08955) focus on improving the training speed.
+Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNeSt](https://arxiv.org/abs/2004.08955) focus on improving the training speed.
 EfficientNetV2 is inspired by EfficientNet and focus on improving both training speed and parameter efficiency.
