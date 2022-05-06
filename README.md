@@ -26,6 +26,7 @@ The file "image_test.py" uses a pre-trained model on ImageNet to classify a samp
 
 ## Results
 Here are the results of fine-tuning the EfficientNetV2 model on CIFAR-10 dataset. As evaluation metrics, we use the training-loss, top-1 and top-5 accuracies of the model.
+
 ![loss-cifar10](https://user-images.githubusercontent.com/47225763/167212696-9e7b3c83-e9f1-4200-a3c6-9d0e488b249d.png)
 
 ![top1-cifar10](https://user-images.githubusercontent.com/47225763/167212700-bc96c272-b74a-4713-8d0b-b559170f433e.png)
