@@ -17,7 +17,18 @@ EfficientNetV2 is mainly inspired by EfficientNet, and addresses the mentioned l
 
 
 ## Setup
+The list of packages required to run the codes: 
+python 3.7.7, cuda 10.1, PyTorch 1.11.0, timm 0.5.4
+
 The file "main.ipynb" uses the pre-trained model on ImageNet and fine-tune it on CIFAR-10 and CIFAR-100 datasets. Due to the computational limitation, we have set the epochs=50 and batch_size=32, but all the set of parameters, including the regularization terms, are adjustable through the file. We compare the performance of this method with two of the literature methods: EfficientNet and [Vision Transformers](https://arxiv.org/abs/2010.11929).
 
-The list of packages required: 
-python 3.7.7, cuda 10.1, PyTorch 1.11.0, timm 0.5.4
+The file "image_test.py" uses a pre-trained model on ImageNet to classify a sample dog picture, with printing the top-5 probablities of the classifier's outcome. 
+
+## Results
+Here are the results of fine-tuning the EfficientNetV2 model on CIFAR-10 dataset. As evaluation metrics, we use the training-loss, top-1 and top-5 accuracies of the model.
+![loss-cifar10](https://user-images.githubusercontent.com/47225763/167212696-9e7b3c83-e9f1-4200-a3c6-9d0e488b249d.png)
+
+![top1-cifar10](https://user-images.githubusercontent.com/47225763/167212700-bc96c272-b74a-4713-8d0b-b559170f433e.png)
+
+![top5-cifar10](https://user-images.githubusercontent.com/47225763/167212708-0c7b943a-09b1-43bf-a088-4daa5b411887.png)
+
