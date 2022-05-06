@@ -1,16 +1,15 @@
 # EfficientNetV2
-In this project we are considering re-implementation and evaluation of the method ["EfficientNetV2: Smaller Models and Faster Training".](https://arxiv.org/abs/2104.00298). We desire the use the pretrained model and finetune it on CIFAR10 dataset.
+This is our project for the course "EC 523: Deep Learning", presented in Boston University. In this project, we investigate and evaluate the method in ["EfficientNetV2: Smaller Models and Faster Training".](https://arxiv.org/abs/2104.00298). EfficientNetV2 is a family of convolutional networks, with the focus on improving the training speed and parameter efficiency of literature methods. Due to the limitation of computional resources, we use the pretrained model on ImageNet dataset, and finetune its parameters on the CIFAR datasets.
 
-The original [implementation](https://github.com/google/automl/tree/master/efficientnetv2) uses TensorFlow. Since we desire PyTorch-based implementations, we are considering these implementations in the literature:
+The original [implementation](https://github.com/google/automl/tree/master/efficientnetv2) uses TensorFlow, but in this project we use a PyTorch-based implementation, using the [timm](https://github.com/rwightman/pytorch-image-models) library. Some of the other PyTorch-based implementations in the literature are as follow:
 1) https://github.com/hankyul2/EfficientNetV2-pytorch
 
 2) https://github.com/jahongir7174/EfficientNetV2
 
 3) https://github.com/d-li14/efficientnetv2.pytorch
 
-There is also an implementation used in [TorchVision](http://pytorch.org/vision/main/generated/torchvision.models.efficientnet_v2_s.html) that we are considering.
 
 
 ## Literature Review
-Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNeSt](https://arxiv.org/abs/2004.08955) focus on improving the training speed.
-EfficientNetV2 is inspired by EfficientNet and focus on improving both training speed and parameter efficiency.
+Training efficiency is one of the important concerns in the deep learning area, specifically image classification tasks. Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, with the cost of slow training, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNeSt](https://arxiv.org/abs/2004.08955) focus on improving the training speed, with the cost of more parameters.
+EfficientNetV2 is mainly inspired by EfficientNet, and addresses the mentioned limitations of the literature works. They leverage a combination of training-aware Neural Architecture Search (NAS) and scaling, to jointly improve training speed and parameter efficiency. Moreover, they propose a variation of progressive learning, which adaptively adjusts the regularization and the image size, which leads to speeding up the training without losing the accuracy. EfficientNetV2 trains up to 4x faster and is up to 6.8x smaller in parameter size, than existing works. 
