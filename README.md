@@ -16,7 +16,7 @@ EfficientNetV2 is mainly inspired by EfficientNet, and addresses the mentioned l
 
 
 ## Setup
-The file "main.ipynb" uses the pre-trained model on ImageNet and fine-tune it on CIFAR-10 and CIFAR-100 datasets. Due to the computational limitation, we have set the epochs=50 and batch_size=32, but all the set of parameters, including the regularization terms, are adjustable through the file. 
+The file "main.ipynb" uses the pre-trained model on ImageNet and fine-tune it on CIFAR-10 and CIFAR-100 datasets. Due to the computational limitation, we have set the epochs=50 and batch_size=32, but all the set of parameters, including the regularization terms, are adjustable through the file. We compare the performance of this method with two of the literature methods: EfficientNet and [Vision Transformers](https://arxiv.org/abs/2010.11929).
 
 The list of packages required: 
 python 3.7.7, cuda 10.1, PyTorch 1.11.0, timm 0.5.4
