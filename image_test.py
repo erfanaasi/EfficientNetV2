@@ -11,8 +11,6 @@ def visualize_feature_output(t):
     plt.imshow(feature_output[0].transpose(0, 2).sum(-1).detach().numpy())
     plt.show()
 
-# # TODO: We need to compare with efficientnet and vision transformers, on cifar10 and cifar100
-
 
 # all_model_names = timm.list_models('*')   # List all models
 # model_names = timm.list_models(pretrained = True)     # List pretrained models
