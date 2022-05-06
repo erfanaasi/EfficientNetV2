@@ -11,5 +11,12 @@ The original [implementation](https://github.com/google/automl/tree/master/effic
 
 
 ## Literature Review
-Training efficiency is one of the important concerns in the deep learning area, specifically image classification tasks. Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, with the cost of slow training, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNeSt](https://arxiv.org/abs/2004.08955) focus on improving the training speed, with the cost of more parameters.
+Training efficiency is one of the important concerns in the deep learning area, specifically image classification tasks. Earliest works such as [DenseNet](https://arxiv.org/abs/1608.06993) and [EfficientNet](https://arxiv.org/abs/1905.11946) focus mainly on parameter efficiency, with the cost of slow training, while on the other side, works such as [RegNet](https://arxiv.org/abs/2003.13678) and [ResNeSt](https://arxiv.org/abs/2004.08955) focus on improving the training speed, with the cost of more parameters. 
 EfficientNetV2 is mainly inspired by EfficientNet, and addresses the mentioned limitations of the literature works. They leverage a combination of training-aware Neural Architecture Search (NAS) and scaling, to jointly improve training speed and parameter efficiency. Moreover, they propose a variation of progressive learning, which adaptively adjusts the regularization and the image size, which leads to speeding up the training without losing the accuracy. EfficientNetV2 trains up to 4x faster and is up to 6.8x smaller in parameter size, than existing works. 
+
+
+## Setup
+The file "main.ipynb" uses the pre-trained model on ImageNet and fine-tune it on CIFAR-10 and CIFAR-100 datasets. Due to the computational limitation, we have set the epochs=50 and batch_size=32, but all the set of parameters, including the regularization terms, are adjustable through the file. 
+
+The list of packages required: 
+python 3.7.7, cuda 10.1, PyTorch 1.11.0, timm 0.5.4
